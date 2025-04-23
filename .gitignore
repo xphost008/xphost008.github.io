@@ -29,5 +29,6 @@ coverage
 
 *.tsbuildinfo
 
-# ignore bat
+# ignore my
 *.bat
+my/
