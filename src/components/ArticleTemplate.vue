@@ -37,7 +37,6 @@ onMounted(() => {
     padding: 20px;
     width: calc(100% - 40px);
     #ArticleTitle {
-        font-family: gdkbs;
         font-size: 30px;
         margin-bottom: 80px;
     }

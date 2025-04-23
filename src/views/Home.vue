@@ -57,7 +57,6 @@ watch(() => route.query, () => {
         border-radius: 20px;
         padding: 25px;
         background: linear-gradient(to right bottom, rgba(234, 125, 35, 0.3), rgba(154, 87, 222, 0.4));
-        font-family: ljzpt;
         .article-title {
             width: 100%;
             font-size: 40px;

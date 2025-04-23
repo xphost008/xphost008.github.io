@@ -52,7 +52,7 @@ function menuClick() {
         font-size: 16px;
         font-weight: bold;
         color: white;
-        font-family: "Arkipelago";
+        font-family: Arkipelago;
     }
     .afdian {
         float: right;

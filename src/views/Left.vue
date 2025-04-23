@@ -71,7 +71,6 @@ function search() {
             background: linear-gradient(to right bottom, rgba(234, 125, 35, 0.2), rgba(154, 87, 222, 0.3));
             min-height: 100px;
             border-radius: 10px;
-            font-family: systb2;
             font-size: 20px;
             ul {
                 list-style: none;

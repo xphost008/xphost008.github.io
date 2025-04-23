@@ -23,7 +23,6 @@ onBeforeMount(() => {
 <style scoped lang="scss">
 #tags {
     padding: 20px;
-    font-family: ljzpt;
     font-size: 24px;
     #tags-list {
         display: flex;
