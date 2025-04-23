@@ -18,10 +18,7 @@ const RightPage = defineAsyncComponent(() => import('./Right.vue'))
                 <div id="contentView">
                     <RouterView />
                 </div>
-                <div id="contentFooter">
-                    文章版权：© Xphost 2025<br>
-                    文章以 CC BY-NC 协议发布。
-                </div>
+                <div id="contentFooter">文章版权：© Xphost 2025<br>文章以 CC BY-NC 协议发布。</div>
             </div>
         </div>
         <div id="contentRight">
