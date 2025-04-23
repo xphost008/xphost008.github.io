@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#ArticleContent p {
+    margin: 10px 0;
+    text-indent: 2em;
+}
+#ArticleContent a {
+    color: rgb(0, 80, 184);
+    text-shadow: 0 0 1px blue;
+    transition: all 0.2s ease-in-out;
+}
+#ArticleContent a:hover{
+    color: blue;
+    text-shadow: 0 0 1px darkblue;
+}
+ul {
+    list-style: disc;
+}
+@font-face {
+    font-family: Arkipelago;
+    src: url(./font/Arkipelago.ttf);
+}
+@font-face {
+    font-family: zhltks;
+    src: url(./font/zhltks.ttf);
+}
+@font-face {
+    font-family: ljzpt;
+    src: url(./font/ljzpt.ttf);
+}
+@font-face {
+    font-family: gdkbs;
+    src: url(./font/gdkbs.ttf);
+}
+@font-face {
+    font-family: systb2;
+    src: url(./font/systb2.otf);
+}
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #1890ff;
+}
+*::-webkit-scrollbar-thumb {
+    background: #0dffdf;
+    border-radius: 5px;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: #0c0ea0;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.inline-code {
+    color: rgb(20, 20, 20);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 0 5px;
+    box-shadow: -1px 1px 3px rgb(0, 0, 0);
+    padding: 0 5px;
+}
