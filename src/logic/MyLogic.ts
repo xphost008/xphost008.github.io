@@ -33,6 +33,13 @@ const articles: ArticlesType[] = [
         title: "世界观所使用的语言",
         date: "2025-1-17",
         tags: ["世界观"]
+    },
+    {
+        id: 5,
+        name: "HighlightTest",
+        title: "使用Vue + TypeScript实现代码高亮+行号测试",
+        date: "2025-4-25",
+        tags: ["编程"]
     }
 ]
 const avatars = import.meta.glob<{ default: string }>(
@@ -55,10 +62,10 @@ interface FriendlinkType {
 }
 const friendlinks: FriendlinkType[] = [
     {
-        avatar: avatarMap['avatar.jpg'],
-        name: 'MyName',
-        description: 'My Description',
-        url: 'https://github.com/MyName'
+        avatar: avatarMap['Chiloven945.jpg'],
+        name: 'Chiloven945',
+        description: '咦惹',
+        url: 'https://chiloven945.github.io/'
     }
 ]
 export {

@@ -22,6 +22,10 @@ ul {
     font-family: Arkipelago;
     src: url(./font/Arkipelago.ttf);
 }
+@font-face {
+    font-family: Consolas-local;
+    src: url(./font/Consola.ttf);
+}
 *::-webkit-scrollbar-track {
     border-radius: 5px;
     background-color: #1890ff;

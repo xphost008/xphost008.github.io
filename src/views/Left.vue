@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { articles } from '@/logic/MyLogic'
 import { ref } from 'vue'
-import { Search } from '@element-plus/icons-vue'
+import { List, Search } from '@element-plus/icons-vue'
 import router from '@/router'
 const searchText = ref("")
 function search() {
@@ -9,6 +9,19 @@ function search() {
         return
     else 
         router.push('/?search=' + searchText.value)
+}
+function getTags() {
+    let tags = 0
+    let tagsSet: string[] = []
+    for (let article of articles) {
+        for (let tag of article.tags) {
+            if (!tagsSet.includes(tag)) {
+                tagsSet.push(tag)
+                tags++
+            }
+        }
+    }
+    return tags
 }
 </script>
 <template>
@@ -35,6 +48,10 @@ function search() {
             </template>
             </el-input>
         </div>
+        <div style="width: calc(100% - 40px); border-bottom: 3px solid gray;"></div>
+        <h4 style="margin-top: 20px">目前本博客一共有：</h4>
+        <h4>{{articles.length}}篇博客</h4>
+        <h4 style="margin-bottom: 20px">{{getTags()}}个标签</h4>
         <div style="width: calc(100% - 40px); border-bottom: 3px solid gray;"></div>
         <h3 id="left-footer">这里本来应该有点东西，但是我没有写（）</h3>
     </div>

@@ -1,0 +1,91 @@
+//以下是data=inline的代码。属于是内联代码块
+code[data="inline"] {
+    font-family: Consolas-local;
+    padding: 0.2em 0.4em;
+    background-color: rgba(240, 240, 240, 0.4);
+    border-radius: 0.3em;
+    font-size: 0.9em;
+    margin: 0 0.2em;
+    box-shadow: 0 0 3px black;
+}
+//以下是把data=block的代码。属于是块状代码块
+div[data="block"] {
+    position: relative;
+    padding-top: 30px;
+    background-color: rgba(16, 16, 16, 0.6);
+    border-radius: 15px;
+    //以下是设置代码块的样式
+    pre code {
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        background-color: rgba(16, 16, 16, 0.3);
+        font-family: Consolas-local;
+        padding-left: 30px;
+    }
+}
+//红绿灯
+.hljs-style {
+    position: absolute;
+    top: 10px;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+}
+//语言名称
+.hljs-lang {
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    top: 7px;
+    right: 60px;
+    font-size: 15px;
+    font-family: Consolas-local;
+    height: 13px;
+}
+//复制按钮
+.hljs-copy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    stroke: white;
+    color: white;
+    font-size: 15px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    svg {
+        vertical-align: middle;
+    }
+}
+//行号
+.hljs-line-number {
+    list-style: none;
+    counter-reset: my-counter;
+    height: 100%;
+    padding: 0 10px;
+    margin-left: 10px;
+    color: white;
+    font-family: Consolas-local;
+    li {
+        counter-increment: my-counter;
+        position: relative;
+        border-left: 2px solid gray;
+        padding-left: 10px;
+        &::before {
+            content: counter(my-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            left: -60px;
+            text-align: right;
+            width: 50px;
+        }
+    }
+}

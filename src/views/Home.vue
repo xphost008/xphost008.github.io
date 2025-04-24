@@ -52,7 +52,7 @@ watch(() => route.query, () => {
     }
     .article {
         width: calc(100% - 50px);
-        min-height: 150px;
+        min-height: 200px;
         flex-shrink: 0;
         border-radius: 20px;
         padding: 25px;
@@ -68,6 +68,18 @@ watch(() => route.query, () => {
         .article-tag {
             width: 100%;
             font-size: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            min-height: 150px;
+            .article-title {
+                font-size: 30px;
+            }
+            .article-date {
+                font-size: 20px;
+            }
+            .article-tag {
+                font-size: 20px;
+            }
         }
     }
 }
