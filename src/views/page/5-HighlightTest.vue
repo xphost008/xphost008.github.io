@@ -101,7 +101,8 @@ div[data="block"] pre code {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     background-color: rgba(16, 16, 16, 0.3);
-    font-family: Consolas-local;
+    /* 使用Consolas字体，更好看~ */
+    font-family: Consolas;
     padding-left: 30px;
 }
 /* 红绿灯 */
@@ -120,7 +121,7 @@ div[data="block"] pre code {
     top: 7px;
     right: 60px;
     font-size: 15px;
-    font-family: Consolas-local;
+    font-family: Consolas;
     height: 13px;
 }
 /* 复制按钮 */
@@ -153,7 +154,7 @@ div[data="block"] pre code {
     padding: 0 10px;
     margin-left: 10px;
     color: white;
-    font-family: Consolas-local;
+    font-family: Consolas;
 }
 .hljs-line-number li {
     counter-increment: my-counter;
