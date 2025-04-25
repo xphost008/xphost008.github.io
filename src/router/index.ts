@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { articles } from "@/logic/MyLogic"
 
 const articlesRoutes = articles.map((article) => ({
@@ -7,7 +7,7 @@ const articlesRoutes = articles.map((article) => ({
 }))
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: "/",

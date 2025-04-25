@@ -4,7 +4,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
 <template>
     <ArticleTemplate>
         <h1>个人简历</h1>
-        <a href="#基础简历部分" style="text-decoration: none; color: black"><h2 id="基础简历部分">基础简历部分</h2></a>
+        <h2>基础简历部分</h2>
         <details>
             <summary>点击展开</summary>
             <div id="BasicResume">
@@ -195,7 +195,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 </div>
             </div>
         </details>
-        <a href="#别的个人信息" style="text-decoration: none; color: black"><h2 id="别的个人信息">别的个人信息</h2></a>
+        <h2>别的个人信息</h2>
         <details>
             <summary>点击展开</summary>
             <ol>
@@ -208,7 +208,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>待补充</li>
             </ol>
         </details>
-        <a href="#个人经历" style="text-decoration: none; color: black"><h2 id="个人经历">个人经历</h2></a>
+        <h2>个人经历</h2>
         <details>
             <summary>点击展开</summary>
             <ul>
@@ -237,7 +237,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>2025年3月初，加入了PCL-Community组织，同月，自己写了一个<a href="https://github.com/PCL-Community/PCL2-Newer-Project" target="_blank">PCL2-Newer-Project</a>。</li>
             </ul>
         </details>
-        <a href="#个人兴趣爱好" style="text-decoration: none; color: black"><h2 id="个人兴趣爱好">个人兴趣爱好</h2></a>
+        <h2>个人兴趣爱好</h2>
         <details>
             <summary>点击展开</summary>
             <ol>
@@ -248,12 +248,12 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>furry！！【想自学画画，设子想画成一条火龙！】</li>
             </ol>
         </details>
-        <a href="#网络昵称由来" style="text-decoration: none; color: black"><h2 id="网络昵称由来">网络昵称由来</h2></a>
+        <h2>网络昵称由来</h2>
         <details>
             <summary>点击展开</summary>
             <p>Xphost：我现在的昵称，以前想做一个论坛，然后名称随便从键盘上敲了2个字母，当时敲的是xp，然后后面加上个【主人】就是xphost！</p>
         </details>
-        <a href="#个人擅长的编程语言【排名从上到下】" style="text-decoration: none; color: black"><h2 id="个人擅长的编程语言【排名从上到下】">个人擅长的编程语言【排名从上到下】</h2></a>
+        <h2>个人擅长的编程语言【排名从上到下】</h2>
         <details>
             <summary>点击展开</summary>
             <ul>
@@ -269,7 +269,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>C/C++</li>
             </ul>
         </details>
-        <a href="#个人管理经验" style="text-decoration: none; color: black"><h2 id="个人管理经验">个人管理经验</h2></a>
+        <h2>个人管理经验</h2>
         <details>
             <summary>点击展开</summary>
             <ul>
@@ -280,7 +280,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>撤职原因：学业。。【当的时候已经是初三和高二了。。】</li>
             </ul>
         </details>
-        <a href="#个人其他事情" style="text-decoration: none; color: black"><h2 id="个人其他事情">个人其他事情</h2></a>
+        <h2>个人其他事情</h2>
         <details>
             <summary>点击展开</summary>
             <h3>与我聊天的注意事项</h3>
@@ -324,7 +324,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>在我这里请不要做伸手党，如果你有某个开发资源找不到或者某个资料无法下载，想寻求我的帮助，我可能会告诉你该网址的正确下载方式，请你不要从我这里无条件索取，我不欢迎伸手党！</li>
             </ol>
         </details>
-        <a href="#个人联系方式" style="text-decoration: none; color: black"><h2 id="个人联系方式">个人联系方式</h2></a>
+        <h2>个人联系方式</h2>
         <details>
             <summary>点击展开</summary>
             <ol>
@@ -333,7 +333,7 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                 <li>剩余联系方式请参考右侧我头像下面~</li>
             </ol>
         </details>
-        <a href="#个人期望" style="text-decoration: none; color: black"><h2 id="个人期望">个人期望</h2></a>
+        <h2>个人期望</h2>
         <details>
             <summary>点击展开</summary>
             <p>希望以后能开心快乐的生活吧！</p>
