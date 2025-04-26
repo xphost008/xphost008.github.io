@@ -69,7 +69,7 @@ function getTags() {
     }
     #articles {
         margin: 10px 0;
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
         display: flex;
         flex-direction: column;
         a {
@@ -89,6 +89,7 @@ function getTags() {
             min-height: 100px;
             border-radius: 10px;
             font-size: 20px;
+            padding: 10px;
             ul {
                 list-style: none;
             }

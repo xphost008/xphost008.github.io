@@ -9,11 +9,6 @@ const RightPage = defineAsyncComponent(() => import('./Right.vue'))
             <LeftPage />
         </div>
         <div id="contentCenter">
-            <div id="sidebarButton">
-                <RouterLink to="/left"><el-button text class="left"><el-icon size="40" color="white"><ArrowLeftBold /></el-icon></el-button></RouterLink>
-                <RouterLink to="/"><el-button text class="center"><el-icon size="40" color="white"><DCaret /></el-icon></el-button></RouterLink>
-                <RouterLink to="/right"><el-button text class="right"><el-icon size="40" color="white"><ArrowRightBold /></el-icon></el-button></RouterLink>
-            </div>
             <div id="contentRouter">
                 <div id="contentView">
                     <RouterView />
@@ -34,11 +29,11 @@ const RightPage = defineAsyncComponent(() => import('./Right.vue'))
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: calc(100% - 60px);
+    height: 100%;
     width: 100%;
     #contentLeft, #contentRight {
         width: 300px;
-        height: 100%;
+        height: calc(100% - 60px);
         backdrop-filter: blur(4px);
         background-color: rgba(255, 255, 255, 0.6);
         margin: 0 30px;
@@ -55,11 +50,11 @@ const RightPage = defineAsyncComponent(() => import('./Right.vue'))
     }
     #contentCenter {
         width: 100%;
-        min-width: 300px;
+        min-width: 400px;
         flex: 1;
         #contentRouter {
-            height: calc(100%);
-            backdrop-filter: blur(4px);
+            height: calc(100% - 60px);
+            backdrop-filter: blur(3px);
             background-color: rgba(255, 255, 255, 0.6);
             border-radius: 30px;
             display: flex;
@@ -75,36 +70,18 @@ const RightPage = defineAsyncComponent(() => import('./Right.vue'))
                 width: 100%;
                 text-align: center;
                 color: white;
-            }
-        }
-        #sidebarButton {
-            max-height: 0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            transition: max-height 0.3s ease-in-out;
-            .el-button {
-                font-size: 40px;
-                width: 120px;
                 height: 60px;
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.4);
-                }
             }
         }
         @media screen and (max-width: 768px) {
-            #sidebarButton {
-                max-height: 60px;
-            }
+            min-width: 300px;
             #contentRouter {
-                height: calc(100% - 60px);
+                height: calc(100% - 80px);
             }
         }
     }
     @media screen and (max-width: 768px) {
-        top: 100px;
-        height: calc(100% - 100px);
+        top: 80px;
     }
 }
 </style>

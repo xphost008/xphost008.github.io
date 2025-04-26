@@ -3,7 +3,7 @@ import { ref } from 'vue';
 const navMaxHeight = ref('0');
 const menuButtonSize = ref("22")
 function getMaxWidth() {
-    return window.innerWidth < 768 ? '180px' : '120px';
+    return window.innerWidth < 768 ? '300px' : '120px';
 }
 function getMenuButton() {
     return window.innerWidth < 768 ? '26' : '20';
@@ -23,6 +23,8 @@ function menuClick() {
         <router-link to="/"><el-button text><el-icon :size="menuButtonSize" color="white"><House /></el-icon>&nbsp;<span style="color: white">主页</span></el-button></router-link><br>
         <router-link to="/about"><el-button text><el-icon :size="menuButtonSize" color="white"><Avatar /></el-icon>&nbsp;<span style="color: white">关于</span></el-button></router-link><br>
         <router-link to="/tags"><el-button text><el-icon :size="menuButtonSize" color="white"><List /></el-icon>&nbsp;<span style="color: white">标签</span></el-button></router-link>
+        <router-link to="/left"><el-button text><el-icon :size="menuButtonSize" color="white"><ArrowLeftBold /></el-icon>&nbsp;<span style="color: white">大纲</span></el-button></router-link><br>
+        <router-link to="/right"><el-button text><el-icon :size="menuButtonSize" color="white"><ArrowRightBold /></el-icon>&nbsp;<span style="color: white">联系/友链</span></el-button></router-link><br>
     </div>
 </template>
 <style scoped lang="scss">
@@ -49,7 +51,7 @@ function menuClick() {
         float: left;
     }
     .text {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         color: white;
         font-family: Arkipelago;
@@ -84,17 +86,17 @@ function menuClick() {
 @media screen and (max-width: 768px) {
     #navbar {
         width: 100%;
-        height: 100px;
+        height: 80px;
         .el-button {
             width: 80px;
-            height: 100px;
+            height: 80px;
         }
         .text {
-            font-size: 20px;
+            font-size: 24px;
         }
     }
     #navmenu {
-        top: 100px;
+        top: 80px;
         .el-button {
             height: 60px;
             font-size: 26px;
