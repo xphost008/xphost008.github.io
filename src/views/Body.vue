@@ -42,7 +42,7 @@ const RightPage = defineAsyncComponent(() => import('./Right.vue'))
         min-width: 300px;
         transition: max-width 0.2s;
         overflow: auto;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1120px) {
             max-width: 0;
             min-width: 0;
             margin: 0;

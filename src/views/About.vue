@@ -7,7 +7,7 @@
         <div id="aboutContent">
             <p>各位好！这里是焰龙嗷！</p>
 
-            <p>一个看起来非常好吃的福瑞控！欢迎各位福瑞控控来赛博rua我！</p>
+            <p>一个<del>看起来</del>非常好吃的福瑞控！欢迎各位福瑞控控来赛博rua我！</p>
 
             <p>我最喜欢的颜色是：<b>#e82b16</b><span style="background-color: #e82b16; vertical-align: middle; width: 20px; height: 20px; display: inline-block; border-radius: 10px; margin: 0 5px;"></span></p>
 
@@ -38,7 +38,13 @@
         margin-bottom: 100px;
     }
     #aboutContent {
-        padding: 0 40px;
+        p {
+            margin: 10px 0;
+            text-indent: 2em;
+        }
+        ul {
+            margin-left: 60px;
+        }
     }
 }
 </style>

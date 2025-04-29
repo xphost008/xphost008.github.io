@@ -3,7 +3,7 @@ import { ref } from 'vue';
 const navMaxHeight = ref('0');
 const menuButtonSize = ref("22")
 function getMaxWidth() {
-    return window.innerWidth < 768 ? '300px' : '120px';
+    return window.innerWidth < 1120 ? window.innerWidth < 768 ? '300px' : '200px' : '120px';
 }
 function getMenuButton() {
     return window.innerWidth < 768 ? '26' : '20';

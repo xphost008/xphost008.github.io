@@ -79,6 +79,7 @@ div[data="block"] {
         position: relative;
         border-left: 2px solid gray;
         padding-left: 10px;
+        vertical-align: middle;
         &::before {
             content: counter(my-counter);
             position: absolute;
