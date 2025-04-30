@@ -168,7 +168,8 @@ import ArticleTemplate from '@/components/ArticleTemplate.vue';
                                         <ul style="list-style: none;">
                                             <li>1. 获得过第五届全国高校计算机能力挑战赛国赛三等奖</li>
                                             <li>2. 获得过2024湖北省工匠杯软件开发赛三等奖</li>
-                                            <li>3. 获得过班级优秀班干部，优秀学生社团等称号</li>
+                                            <li>3. 获得过2025年十六届蓝桥杯Java大学C组省赛二等奖</li>
+                                            <li>4. 获得过班级优秀班干部，优秀学生社团等称号</li>
                                         </ul>
                                     </div>
                                 </div>
