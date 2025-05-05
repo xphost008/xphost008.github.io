@@ -5,6 +5,7 @@
 #ArticleContent p {
     margin: 10px 0;
     text-indent: 2em;
+    white-space: pre-line;
 }
 #ArticleContent a {
     color: rgb(0, 80, 184);

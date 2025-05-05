@@ -16,7 +16,7 @@ const articles: ArticlesType[] = [
     {
         id: 2,
         name: "WorldOutlook",
-        title: "世界观",
+        title: "我的世界观",
         date: "2023-12-27",
         tags: ["世界观"]
     },
@@ -40,6 +40,13 @@ const articles: ArticlesType[] = [
         title: "使用Vue + TypeScript实现代码高亮+行号测试",
         date: "2025-4-25",
         tags: ["编程"]
+    },
+    {
+        id: 6,
+        name: "BlackWorldBefore",
+        title: "世界观——前言",
+        date: "2025-5-6",
+        tags: ["世界观", "小说"]
     }
 ]
 const avatars = import.meta.glob<{ default: string }>(
