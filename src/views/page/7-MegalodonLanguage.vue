@@ -175,9 +175,6 @@ const code_PkgJSON = `{
         <h4>可以看到，我写的json格式的代码非常简陋，不过不要在意这些小细节，我们未来可以逐步完善~</h4>
         <p>OK了！本期教程到此结束，感谢各位的观看，如果觉得我写得好的，请为我<a href="https://afdian.com/a/xphost">爱发电</a>吧~秋梨膏~~</p>
         <p>我语言的highlightjs还暂未搞好，不过可以期待一下！<a href="https://github.com/xphost008/xphost008.github.io/blob/master/src/logic/megalodon.js">点我进入highlight的源码</a>，欢迎各位来为我的语言提交你的建议！</p>
-        <div v-auto-insert data="block" lang="mgl">
-            <highlightjs language="mgl" :autodetect="false" :code="'pub'" />
-        </div>
     </ArticleTemplate>
 </template>
 <style scoped lang="scss">
