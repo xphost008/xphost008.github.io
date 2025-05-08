@@ -4,10 +4,10 @@ const code_FileTree = `└─bin
     ├─mglc.exe
     ├─mglp.exe
     └─mgld.exe`
-const code_PkgTree = `├src
+const code_PkgTree = `├─src
 │   └─main.mgl
-├.gitignore
-└pkg.json`
+├─.gitignore
+└─pkg.json`
 const code_PkgJSON = `{
     "name": "My Tutorial Work",
     "main": "main.mgl",
