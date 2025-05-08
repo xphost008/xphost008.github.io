@@ -3,7 +3,7 @@ import { articles } from "@/logic/MyLogic"
 
 const articlesRoutes = articles.map((article) => ({
   path: `${article.id}`,
-  component: () => import(`@/views/page/${article.id}-${article.name}.vue`)
+  component: () => import(`@/views/pages/${article.id}-${article.name}.vue`)
 }))
 
 const router = createRouter({

@@ -22,7 +22,7 @@ onMounted(() => {
         <div id="ArticleTitle">
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="bdt">{{ title }}</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="bdt">{{ date }}</span><br>
-            <el-icon size="30" color="black" style="vertical-align: middle"><List /></el-icon><router-link style="color: black; text-decoration: none;" v-for="tag in tags" :key="tag" :to="'/?tags=' + tag"><span class="inline-code">{{ tag }}</span></router-link>
+            <el-icon size="30" color="black" style="vertical-align: middle"><List /></el-icon><router-link style="color: black; text-decoration: none;" v-for="tag in tags" :key="tag" :to="'/?tag=' + tag"><span class="inline-code">{{ tag }}</span></router-link>
         </div>
         <div id="ArticleContent">
             <slot></slot>

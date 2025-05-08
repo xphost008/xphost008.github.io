@@ -54,6 +54,13 @@ const articles: ArticlesType[] = [
         title: "自制编程语言——巨齿鲨语言",
         date: "2025-5-8",
         tags: ["编程"]
+    },
+    {
+        id: 8,
+        name: "MegalodonGrammer",
+        title: "巨齿鲨语言——语法介绍",
+        date: "2025-5-9",
+        tags: ["编程"]
     }
 ]
 const avatars = import.meta.glob<{ default: string }>(

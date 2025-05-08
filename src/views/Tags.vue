@@ -16,7 +16,7 @@ onBeforeMount(() => {
     <div id="tags">
         <h1>所有标签</h1>
         <div id="tags-list">
-            <router-link v-for="tag in tags" :key="tag" :to="'/?tags=' + tag"><div class="tag inline-code">{{tag}}</div></router-link>
+            <router-link v-for="tag in tags" :key="tag" :to="'/?tag=' + tag"><div class="tag inline-code">{{tag}}</div></router-link>
         </div>
     </div>
 </template>
