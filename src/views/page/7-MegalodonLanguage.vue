@@ -44,21 +44,22 @@ const code_PkgJSON = `{
         <h2>开始新建</h2>
         <p>首先，本语言通过zip下载，下载之后解压，你会得到以下文件树，其中列出几个关键的东西：</p>
         <div v-auto-insert data="block" lang="fileTree">
-            <highlightjs :autodetect="false" :code="code_FileTree"/>
+            <pre><code>{{code_FileTree}}</code></pre>
         </div>
         <p>其中，<code data="inline">mglc</code>是编译一个普通类的东西，类似于你在桌面上新建一个<code data="inline">xxx.mgl</code>，然后直接用<code data="inline">mglc</code>可以直接运行这个文件。</p>
         <p><code data="inline">mglp</code>可就神奇了，它是一个创建和运行包的东西，你可以使用<code data="inline">mglp new mywork</code>来创建一个新的包。此时mglp会在你的当前目录下创建一个新的文件夹，名字为<code data="inline">mywork</code>，里面有一堆文件。这个待会说。此时，你再运行<code data="inline">mglp run mywork</code>，可以直接运行这个包。mglp会自动找到你的主类并加载的。</p>
         <p><code data="inline">mgld</code>是个好东西啊！它类似于是一个包管理器的东西，你可以上传和下载第三方包，使用<code data="inline">mgld install &lt;包的名字&gt;</code>来安装包，你也可以使用<code data="inline">mgld install &lt;包的名字&gt; mywork</code>来将包装到你的工作目录下。也可以使用<code data="inline">--global</code>参数来直接把包安装到全局目录下。使用<code data="inline">mgld publish mywork</code>进行发布第三方包。</p>
         <p>介绍了基本的文件树之后，下面我们就来看看如何新建一个包之后的文件树吧：</p>
         <div v-auto-insert data="block" lang="fileTree">
-            <highlightjs :autodetect="false" :code="code_PkgTree"/>
+            <pre><code>{{code_PkgTree}}</code></pre>
+            <!-- <highlightjs :autodetect="false" :code="code_PkgTree"/> -->
         </div>
         <p>是的！就三个文件，<code data="inline">.gitignore</code>不用多说，其中<code data="inline">pkg.json</code>是存储第三方包的。我们可以在里面写一点键值，键值晚点说。</p>
         <p>然后就是<code data="inline">main.mgl</code>了！这个是我们的主文件！文件名可以是不同的，这个晚点可以在pkg.json里面定义。</p>
         <h2>工作空间简介</h2>
         <p>OK，接下来我们就可以去看pkg.json里面具体有什么内容了！</p>
         <div v-auto-insert data="block" lang="json">
-            <highlightjs language="json" :code="code_PkgJSON"/>
+            <highlightjs language="json" :autodetect="false" :code="code_PkgJSON"/>
         </div>
         <p>可以看到，在其中有着非常多的<code data="inline">元数据信息</code>，这些信息是用于发布到我们的官方仓库时需要的。【ps：我不会告诉你我借鉴了许多Rust Cargo.toml里的内容~】</p>
         <p>当你使用cmd进入了工作目录后，你可以使用<code data="inline">mgld install</code>直接安装pkg.json的<code data="inline">dependencies</code>键下的所有第三方包。当然，你也可以指定不同的安装过程，比如当<code data="inline">global</code>键值为<code data="inline">false</code>时安装到本地。为<code data="inline">true</code>时安装到全局。默认为false。</p>

@@ -15,7 +15,7 @@ hljs.registerLanguage('mgl', mgl)
 const autoInsert: Directive = {
     async mounted(el: HTMLElement){
         //获取data，如果data是block的话，就给其添加highlight的标准样式
-        const dataValue = el.getAttribute("data")
+        const dataValue = el.getAttribute("data") || ""
         const langValue = el.getAttribute("lang") || ""
         if(dataValue === "block") {
             //添加红绿灯
@@ -42,14 +42,9 @@ const autoInsert: Directive = {
                 navigator.clipboard.writeText(childcode.innerText)
             }
             el.insertAdjacentElement("afterbegin", button)
-            //以下为处理行号
+            //以下为处理行号，添加ol、li显示行号。
             let childcode = el.getElementsByTagName("pre")[0].getElementsByTagName("code")[0]
-            // 先执行高亮
-            //为什么要先执行高亮？因为必须先执行高亮，里面才有span class标签高亮（
-            if (hljs) {
-                hljs.highlightElement(childcode);
-            }
-            //再为其加ol、li显示行号。
+
             let childSplit = childcode.innerHTML.split("\n")
             let lineNumber = document.createElement("ol")
             lineNumber.className = "hljs-line-number"

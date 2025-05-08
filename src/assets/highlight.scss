@@ -19,11 +19,12 @@ div[data="block"] {
     border-radius: 15px;
     //以下是设置代码块的样式
     pre code {
+        display: block;
         border-bottom-right-radius: 15px;
         border-bottom-left-radius: 15px;
         background-color: rgba(16, 16, 16, 0.3);
         font-family: Consolas-local;
-        padding-left: 30px;
+        padding: 1em 30px;
     }
 }
 //红绿灯

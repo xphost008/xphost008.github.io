@@ -181,7 +181,7 @@ div[data="block"] pre code {
         <p>首先，用vue新建一个项目，使用<code data="inline">npm create vue@latest</code>创建一个新的vue脚手架吧！</p>
         <p>然后，请进入你创建的目录底下，直接cd进去即可。然后进入cmd，输入以下两行代码，安装highlight.js插件！</p>
         <div v-auto-insert data="block" lang="bash">
-            <highlightjs language="vue" :autodetect="false" :code="code1" />
+            <pre><code>{{code1}}</code></pre>
         </div>
         <p>接下来，请删掉src目录下的所有内容，然后跟着我来写！首先新建一个TypeScript类，文件名叫<code data="inline">main.ts</code>
         然后请键入以下TypeScript代码：</p>
