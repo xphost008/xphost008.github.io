@@ -44,14 +44,14 @@ const code_PkgJSON = `{
         <h2>开始新建</h2>
         <p>首先，本语言通过zip下载，下载之后解压，你会得到以下文件树，其中列出几个关键的东西：</p>
         <div v-auto-insert data="block" lang="fileTree">
-            <highlightjs :code="code_FileTree"/>
+            <highlightjs :autodetect="false" :code="code_FileTree"/>
         </div>
         <p>其中，<code data="inline">mglc</code>是编译一个普通类的东西，类似于你在桌面上新建一个<code data="inline">xxx.mgl</code>，然后直接用<code data="inline">mglc</code>可以直接运行这个文件。</p>
         <p><code data="inline">mglp</code>可就神奇了，它是一个创建和运行包的东西，你可以使用<code data="inline">mglp new mywork</code>来创建一个新的包。此时mglp会在你的当前目录下创建一个新的文件夹，名字为<code data="inline">mywork</code>，里面有一堆文件。这个待会说。此时，你再运行<code data="inline">mglp run mywork</code>，可以直接运行这个包。mglp会自动找到你的主类并加载的。</p>
         <p><code data="inline">mgld</code>是个好东西啊！它类似于是一个包管理器的东西，你可以上传和下载第三方包，使用<code data="inline">mgld install &lt;包的名字&gt;</code>来安装包，你也可以使用<code data="inline">mgld install &lt;包的名字&gt; mywork</code>来将包装到你的工作目录下。也可以使用<code data="inline">--global</code>参数来直接把包安装到全局目录下。使用<code data="inline">mgld publish mywork</code>进行发布第三方包。</p>
         <p>介绍了基本的文件树之后，下面我们就来看看如何新建一个包之后的文件树吧：</p>
         <div v-auto-insert data="block" lang="fileTree">
-            <highlightjs :code="code_PkgTree"/>
+            <highlightjs :autodetect="false" :code="code_PkgTree"/>
         </div>
         <p>是的！就三个文件，<code data="inline">.gitignore</code>不用多说，其中<code data="inline">pkg.json</code>是存储第三方包的。我们可以在里面写一点键值，键值晚点说。</p>
         <p>然后就是<code data="inline">main.mgl</code>了！这个是我们的主文件！文件名可以是不同的，这个晚点可以在pkg.json里面定义。</p>
@@ -174,7 +174,10 @@ const code_PkgJSON = `{
         <p>当你们使用加号和减号来声明版本时，请注意：减号后面不能跟<code data="inline">0.0.1</code>，否则会导致mgld publish失败。因为语言版本不可能发布0.0.0</p>
         <h4>可以看到，我写的json格式的代码非常简陋，不过不要在意这些小细节，我们未来可以逐步完善~</h4>
         <p>OK了！本期教程到此结束，感谢各位的观看，如果觉得我写得好的，请为我<a href="https://afdian.com/a/xphost">爱发电</a>吧~秋梨膏~~</p>
-        <p>我语言的highlightjs还暂未搞好，不过可以期待一下！<a href="https://github.com/xphost008/xphost008.github.io/blob/master/src/logic/megalodon/index.js">点我进入highlight的源码</a>，欢迎各位来为我的语言提交你的建议！</p>
+        <p>我语言的highlightjs还暂未搞好，不过可以期待一下！<a href="https://github.com/xphost008/xphost008.github.io/blob/master/src/logic/megalodon.js">点我进入highlight的源码</a>，欢迎各位来为我的语言提交你的建议！</p>
+        <div v-auto-insert data="block" lang="mgl">
+            <highlightjs language="mgl" :autodetect="false" :code="'pub'" />
+        </div>
     </ArticleTemplate>
 </template>
 <style scoped lang="scss">

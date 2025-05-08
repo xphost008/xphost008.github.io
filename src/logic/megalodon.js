@@ -1,4 +1,4 @@
-function mgl(hljs) {
+export default function mgl(hljs) {
     const KEYWORDS = [
         "pub",
         "func",
@@ -35,4 +35,3 @@ function mgl(hljs) {
         ]
     }
 }
-module.exports = mgl;

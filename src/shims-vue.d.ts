@@ -1,0 +1,1 @@
+declare module "@/logic/megalodon.js"

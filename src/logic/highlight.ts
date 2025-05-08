@@ -4,7 +4,7 @@ import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
 import json from 'highlight.js/lib/languages/json'
-import mgl from './megalodon'
+import mgl from "./megalodon"
 import type { App, Directive } from 'vue'
 hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('xml', xml)
