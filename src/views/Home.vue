@@ -7,7 +7,7 @@ const route = useRoute()
 const articleFilter = reactive<ArticlesType[]>([])
 const page = ref(0)
 function updateArticle() {
-    page.value = (route.query.page || 1) - 1
+    page.value = (Number(route.query.page) || 1) - 1
     articleFilter.length = 0
     let start = page.value * 10;
     let end = Math.min(start + 9, articles.length - 1);
