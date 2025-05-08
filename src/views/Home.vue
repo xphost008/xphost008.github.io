@@ -16,7 +16,7 @@ function updateArticle() {
             break
         }
         let article = articles[i]
-        if((route.query.tags == null || article.tags.includes(route.query.tag as string)) &&
+        if((route.query.tag == null || article.tags.includes(route.query.tag as string)) &&
             (route.query.search == null || article.title.indexOf(route.query.search as string) >= 0)) {
             articleFilter.push(article)
         }
