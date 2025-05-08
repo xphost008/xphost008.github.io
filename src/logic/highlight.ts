@@ -3,11 +3,14 @@ import hljsVuePlugin from '@highlightjs/vue-plugin'
 import typescript from 'highlight.js/lib/languages/typescript'
 import xml from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
+import json from 'highlight.js/lib/languages/json'
+import mgl from './megalodon'
 import type { App, Directive } from 'vue'
 hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('xml', xml)
 hljs.registerLanguage('css', css)
-
+hljs.registerLanguage('json', json)
+hljs.registerLanguage('mgl', mgl)
 //以下是为了做highlight的函数
 const autoInsert: Directive = {
     async mounted(el: HTMLElement){
@@ -21,14 +24,13 @@ const autoInsert: Directive = {
                 div.className = "hljs-style"
                 div.style.left = (10 + i * 25) + "px"
                 div.style.backgroundColor = i == 0 ? "red" : i == 1 ? "orange" : "green"
-                el.insertAdjacentHTML("afterbegin", div.outerHTML)
+                el.insertAdjacentElement("afterbegin", div)
             }
             //添加代码名称，这里使用了lang标识符
-            let childcode = el.getElementsByTagName("pre")[0].getElementsByTagName("code")[0]
             let text = document.createElement("span")
             text.className = "hljs-lang"
             text.innerText = langValue //在这
-            el.insertAdjacentHTML("afterbegin", text.outerHTML)
+            el.insertAdjacentElement("afterbegin", text)
             //添加复制按钮。
             let button = document.createElement("button")
             button.className = "hljs-copy"
@@ -40,8 +42,10 @@ const autoInsert: Directive = {
                 navigator.clipboard.writeText(childcode.innerText)
             }
             el.insertAdjacentElement("afterbegin", button)
+            //以下为处理行号
+            let childcode = el.getElementsByTagName("pre")[0].getElementsByTagName("code")[0]
             // 先执行高亮
-            //为什么要先执行高亮？因为必须先执行高亮，里面才有span color标签高亮（
+            //为什么要先执行高亮？因为必须先执行高亮，里面才有span class标签高亮（
             if (hljs) {
                 hljs.highlightElement(childcode);
             }
@@ -49,10 +53,33 @@ const autoInsert: Directive = {
             let childSplit = childcode.innerHTML.split("\n")
             let lineNumber = document.createElement("ol")
             lineNumber.className = "hljs-line-number"
+            let lineComment = false
+            let lineString = false
             for(let i = 0; i < childSplit.length; i++) {
-                console.log(childSplit[i])
+                //这里需要特殊处理多行注释和多行字符串
+                let lineSpan = childSplit[i]
+                if(lineComment) {
+                    lineSpan = '<span class="hljs-comment">' + lineSpan
+                    if(lineSpan.indexOf('</span>') != -1) {
+                        lineComment = false
+                    }
+                }
+                if (lineSpan.indexOf('<span class="hljs-comment">') != -1 && lineSpan.indexOf('</span>') == -1) {
+                    lineSpan += '</span>'
+                    lineComment = true
+                }
+                if(lineString) {
+                    lineSpan = '<span class="hljs-string">' + lineSpan
+                    if(lineSpan.indexOf('</span>') != -1) {
+                        lineString = false
+                    }
+                }
+                if(lineSpan.indexOf('<span class="hljs-string">') != -1 && lineSpan.indexOf('</span>') == -1) {
+                    lineSpan += '</span>'
+                    lineString = true
+                }
                 let li = document.createElement("li")
-                li.innerHTML = childSplit[i]
+                li.innerHTML = lineSpan
                 lineNumber.insertAdjacentElement("beforeend", li)
             }
             childcode.innerHTML = lineNumber.outerHTML

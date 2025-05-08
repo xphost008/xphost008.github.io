@@ -1,0 +1,23 @@
+# article: https://juejin.cn/post/7334714350899642407
+name: Build and Deploy
+on: 
+  push:
+    branches: ["main"]
+content: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist'
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

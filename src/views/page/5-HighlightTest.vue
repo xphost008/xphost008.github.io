@@ -205,7 +205,7 @@ div[data="block"] pre code {
         <div v-auto-insert data="block" lang="typescript">
             <highlightjs language="typescript" :autodetect="false" :code="code5" />
         </div>
-        <p>此时代码将会变成7行，我们再在<code lang="inline">app.mount('#app')</code>的上面一行，添加一行如下代码：</p>
+        <p>此时代码将会变成7行，我们再在<code data="inline">app.mount('#app')</code>的上面一行，添加一行如下代码：</p>
         <div v-auto-insert data="block" lang="typescript">
             <highlightjs language="typescript" :autodetect="false" :code="code6" />
         </div>

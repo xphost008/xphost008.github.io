@@ -47,6 +47,13 @@ const articles: ArticlesType[] = [
         title: "世界观——前言",
         date: "2025-5-6",
         tags: ["世界观", "小说"]
+    },
+    {
+        id: 7,
+        name: "MegalodonLanguage",
+        title: "自制编程语言——巨齿鲨语言",
+        date: "2025-5-8",
+        tags: ["编程"]
     }
 ]
 const avatars = import.meta.glob<{ default: string }>(
