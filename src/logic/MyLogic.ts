@@ -86,7 +86,19 @@ const friendlinks: FriendlinkType[] = [
         avatar: avatarMap['Chiloven945.jpg'],
         name: 'Chiloven945',
         description: '咦惹',
-        url: 'https://chiloven945.github.io/'
+        url: 'https://chiloven945.github.io/',
+    },
+    {
+        avatar: avatarMap['WolfYang.jpg'],
+        name: '阳帆',
+        description: '黄鹤一去不复返，白云千载空悠悠',
+        url: 'https://wolfyang.fan',
+    },
+    {
+        avatar: avatarMap['Milu.jpg'],
+        name: '米露',
+        description: '放弃个性,就和死了没什么区别',
+        url: 'https://milu.ink',
     }
 ]
 export {
