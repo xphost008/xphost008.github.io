@@ -37,15 +37,18 @@ function imgTransitionEnd() {
         </div>
         <h1 style="color: darkgreen">我的友链</h1>
         <div id="friendlinks">
-            <a v-for="link in friendlinks" :href="link.url" target="_blank">
-                <div class="friendlink">
-                    <img :src="link.avatar" :alt="link.name">
-                    <div class="friendContent">
-                        <p>{{link.name}}</p>
-                        <p>{{link.description}}</p>
+            <template v-for="(friendlink, index) in friendlinks" :key="index">
+                <a :href="friendlink.url" target="_blank">
+                    <div class="friendlink">
+                        <img :src="friendlink.avatar" :alt="friendlink.name">
+                        <div class="friendContent">
+                            <p>{{friendlink.name}}</p>
+                            <p>{{friendlink.description}}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+                <br v-if="index != friendlinks.length - 1" />
+            </template>
         </div>
     </div>
 </template>
