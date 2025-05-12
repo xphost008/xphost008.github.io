@@ -74,14 +74,14 @@ function getTags() {
         flex-direction: column;
         a {
             text-decoration: none;
+        }
+        .article {
             color: black;
             transition: all 0.2s;
             &:hover {
                 box-shadow: 0 0 10px pink;
                 transform: scale(1.02);
             }
-        }
-        .article {
             display: flex;
             flex-direction: column;
             align-items: center;

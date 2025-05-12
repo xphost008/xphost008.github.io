@@ -89,18 +89,18 @@ function imgTransitionEnd() {
         margin: 10px 0;
         a {
             text-decoration: none;
-            color: rgb(32, 32, 32);
-            transition: all 0.2s;
-            &:hover {
-                transform: scale(1.02);
-                box-shadow: 0 0 10px pink;
-            }
         }
         .friendlink {
             border-radius: 10px;
             background: linear-gradient(to right bottom, rgba(234, 125, 35, 0.2), rgba(154, 87, 222, 0.3));
             display: flex;
             flex-shrink: 0;
+            color: rgb(32, 32, 32);
+            transition: all 0.2s;
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 0 10px pink;
+            }
             img {
                 border-radius: 50%;
                 width: 80px;

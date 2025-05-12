@@ -77,13 +77,7 @@ watch(() => route.query, () => {
     padding: 20px 30px;
     a {
         text-decoration: none;
-        color: black;
-        transition: all 0.2s;
         width: 100%;
-        &:hover {
-            box-shadow: 0 0 10px pink;
-            transform: scale(1.02);
-        }
     }
     .article {
         width: calc(100% - 50px);
@@ -92,6 +86,12 @@ watch(() => route.query, () => {
         border-radius: 20px;
         padding: 25px;
         background: linear-gradient(to right bottom, rgba(234, 125, 35, 0.3), rgba(154, 87, 222, 0.4));
+        color: black;
+        transition: all 0.2s;
+        &:hover {
+            box-shadow: 0 0 10px pink;
+            transform: scale(1.02);
+        }
         .article-title {
             width: 100%;
             font-size: 40px;
