@@ -92,7 +92,7 @@ const friendlinks: FriendlinkType[] = [
         avatar: avatarMap['WolfYang.jpg'],
         name: '阳帆',
         description: '黄鹤一去不复返，白云千载空悠悠',
-        url: 'https://wolfyang.fan',
+        url: 'https://blog.wolfyang.fan',
     },
     {
         avatar: avatarMap['Milu.jpg'],

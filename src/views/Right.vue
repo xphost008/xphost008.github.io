@@ -27,9 +27,9 @@ function imgTransitionEnd() {
     <div id="right">
         <img id="avatar" ref="ava" @click="rotateImg" @transitionend="imgTransitionEnd" src="@/assets/img/avatar.jpg" alt="avatar">
         <div id="across">
-            <a href="https://github.com/xphost008" target="_blank"><img src="@/assets/img/github.svg" alt="github"></a>
-            <a href="https://afdian.com/a/xphost" target="_blank"><img src="@/assets/img/afdian.ico" alt="爱发电"></a>
-            <a href="https://space.bilibili.com/3546639830616204" target="_blank"><img src="@/assets/img/bilibili.ico" alt="bilibili"></a>
+            <a title="Github" href="https://github.com/xphost008" target="_blank"><img src="@/assets/img/github.svg" alt="github"></a>
+            <a title="爱发电" href="https://afdian.com/a/xphost" target="_blank"><img src="@/assets/img/afdian.ico" alt="爱发电"></a>
+            <a title="Bilibili" href="https://space.bilibili.com/3546639830616204" target="_blank"><img src="@/assets/img/bilibili.ico" alt="bilibili"></a>
         </div>
         <div id="personal">
             <p>我爱这个世界，正如这个世界爱我一样</p>
@@ -60,10 +60,20 @@ function imgTransitionEnd() {
     z-index: 100;
     overflow: auto;
     #avatar {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+        margin: 50px;
         border-radius: 50%;
-        margin: 30px;
+        @media screen and (max-width: 1120px) {
+            width: 150px;
+            height: 150px;
+            margin: 40px;
+        }
+        @media screen and (max-width: 768px) {
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+        }
     }
     #across {
         display: flex;
@@ -123,13 +133,6 @@ function imgTransitionEnd() {
                     }
                 }
             }
-        }
-    }
-    @media screen and (min-width: 768px) {
-        #avatar {
-            width: 100px;
-            height: 100px;
-            margin: 50px;
         }
     }
 }
