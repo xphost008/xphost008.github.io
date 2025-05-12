@@ -96,7 +96,7 @@ const friendlinks: FriendlinkType[] = [
     },
     {
         avatar: avatarMap['Milu.jpg'],
-        name: '米露',
+        name: '米露小窝',
         description: '放弃个性,就和死了没什么区别',
         url: 'https://milu.ink',
     }
