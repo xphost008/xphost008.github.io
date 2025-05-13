@@ -90,7 +90,7 @@ const friendlinks: FriendlinkType[] = [
     },
     {
         avatar: avatarMap['WolfYang.jpg'],
-        name: '阳帆',
+        name: '阳帆の小窝',
         description: '黄鹤一去不复返，白云千载空悠悠',
         url: 'https://blog.wolfyang.fan',
     },
