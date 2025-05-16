@@ -33,6 +33,7 @@ const code_PkgJSON = `{
     <ArticleTemplate>
         <h1>本篇文章将给各位介绍一下我最近构思（bushi）的一门编程语言！</h1>
         <p>本语言的语法比较简单，比<code data="inline">Rust、C++</code>那些要免去一丢丢的抽象概念。</p>
+        <p>本语言的最终目的并不是为了取代Rust、C++等一系列语言，而是满足我个人的一些怪癖。。当然，如果未来真的做出来了，那肯定是属于那种<strong>性能对比Rust、语法简单到像Java、编译性语言</strong>的一个独特的优势！</p>
         <p>目前该语言已通过我自己写的<code data="inline">highlight</code>实现了语法高亮。</p>
         <p>啊呀，目前本编程语言暂时处于【构思】状态，连文件夹都没开始新建。于是各位就当作看个乐子得了~</p>
         <h2>语言前言</h2>
@@ -80,7 +81,7 @@ const code_PkgJSON = `{
             </tr>
             <tr>
                 <td><code data="inline">main</code></td>
-                <td>主程序文件名（默认从src下找）</td>
+                <td>主程序文件名（从src下找）</td>
                 <td>main.mgl</td>
             </tr>
             <tr>
@@ -187,9 +188,9 @@ table {
     tr td, tr th {
         min-height: 40px;
         border: 1px solid black;
-    }
-    tr td:nth-child(1) {
-        text-align: right;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        font-size: 20px;
     }
 }
 </style>

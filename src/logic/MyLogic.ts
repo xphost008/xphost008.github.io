@@ -52,14 +52,21 @@ const articles: ArticlesType[] = [
         id: 7,
         name: "MegalodonLanguage",
         title: "自制编程语言——巨齿鲨语言",
-        date: "2025-5-8",
+        date: "2025-5-9",
         tags: ["编程"]
     },
     {
         id: 8,
         name: "MegalodonGrammer",
         title: "巨齿鲨语言——语法介绍",
-        date: "2025-5-9",
+        date: "2025-5-16",
+        tags: ["编程"]
+    },
+    {
+        id: 9,
+        name: "MegalodonKeywords",
+        title: "巨齿鲨语言——关键字介绍",
+        date: "2025-5-17",
         tags: ["编程"]
     }
 ]
