@@ -44,7 +44,8 @@ watch(() => route.query, () => {
             <router-link :to="'/article/' + (article.id)">
                 <div class="article">
                     <p class="article-title">{{article.title}}</p>
-                    <p class="article-date">{{article.date}}</p><br><br>
+                    <p class="article-date">{{article.date}}</p><hr>
+                    <p style="text-indent: 2em">{{article.description}}</p><br><br><br>
                     <p class="article-tag"><el-icon size="30" color="black" style="vertical-align: middle"><List /></el-icon>&nbsp;&nbsp;<span v-for="tag in article.tags" :key="tag" class="inline-code" style="vertical-align: middle">{{tag}}</span></p>
                 </div>
             </router-link>
@@ -84,7 +85,7 @@ watch(() => route.query, () => {
         min-height: 200px;
         flex-shrink: 0;
         border-radius: 20px;
-        padding: 25px;
+        padding: 20px;
         background: linear-gradient(to right bottom, rgba(234, 125, 35, 0.3), rgba(154, 87, 222, 0.4));
         color: black;
         transition: all 0.2s;
@@ -94,11 +95,12 @@ watch(() => route.query, () => {
         }
         .article-title {
             width: 100%;
-            font-size: 40px;
+            font-size: 30px;
+            font-weight: bold;
         }
         .article-date {
             width: 100%;
-            font-size: 30px;
+            font-size: 24px;
         }
         .article-tag {
             width: 100%;
@@ -107,10 +109,10 @@ watch(() => route.query, () => {
         @media screen and (max-width: 768px) {
             min-height: 150px;
             .article-title {
-                font-size: 30px;
+                font-size: 24px;
             }
             .article-date {
-                font-size: 20px;
+                font-size: 16px;
             }
             .article-tag {
                 font-size: 20px;

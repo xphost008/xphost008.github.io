@@ -33,8 +33,8 @@ function getTags() {
             <router-link :to="'/article/' + (articles.length)">
                 <div class="article">
                     <ul>
-                        <li>&nbsp;&nbsp;&nbsp;&nbsp;{{articles[articles.length - 1].title}}</li>
-                        <li>&nbsp;&nbsp;&nbsp;&nbsp;{{articles[articles.length - 1].date}}</li>
+                        <li class="article-title">{{articles[articles.length - 1].title}}</li>
+                        <li>{{articles[articles.length - 1].date}}</li>
                         <li><el-icon size="30" color="black" style="vertical-align: middle"><List /></el-icon>&nbsp;&nbsp;<span v-for="tag in articles[articles.length - 1].tags" :key="tag" class="inline-code" style="vertical-align: middle">{{tag}}</span></li>
                     </ul>
                 </div>
@@ -94,6 +94,9 @@ function getTags() {
                 list-style: none;
             }
         }
+        .article-title {
+            font-weight: bold;
+        }
     }
     #left-footer {
         padding: 20px;
@@ -101,6 +104,10 @@ function getTags() {
     #searchBox {
         width: calc(100% - 80px);
         margin: 20px 0;
+    }
+    h4 {
+        font-weight: normal;
+        color: #404040;
     }
 }
 </style>

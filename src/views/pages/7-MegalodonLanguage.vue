@@ -17,7 +17,7 @@ const code_PkgJSON = `{
     "license": "MIT",
     "homepage": "https://github.com/Megalodon/MGLanguage",
     "author": "Megalodon",
-    "version": "+0.4.6",
+    "mglversion": "+0.4.6",
     "source": "https://github.com/Megalodon/MGLanguage",
     "dependencies": [
         {
@@ -115,7 +115,7 @@ const code_PkgJSON = `{
                 <td>空</td>
             </tr>
             <tr>
-                <td><code data="inline">version</code></td>
+                <td><code data="inline">mglversion</code></td>
                 <td>支持的mgl版本</td>
                 <td>latest</td>
             </tr>
