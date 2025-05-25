@@ -3,6 +3,7 @@ export interface ArticlesType {
     name: string,
     title: string,
     date: string,
+    description: string,
     tags: string[]
 }
 const articles: ArticlesType[] = [
